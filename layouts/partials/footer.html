@@ -1,0 +1,19 @@
+<footer class="footer">
+  <div class="footer__inner">
+      <div class="copyright">
+        <span>Powered by <a href="https://gohugo.io">Hugo</a></span>
+        <span style="margin-right: 10px;">:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> by <a href="https://github.com/panr" target="_blank">panr</a></span>
+        <span>:: Junk by <a href="https://github.com/miffellaneous" target="_blank">Miffy</a></span>
+      </div>
+  </div>
+</footer>
+
+{{ $menu := resources.Get "js/menu.js" | js.Build }}
+{{ $cp := resources.Get "js/code.js" | js.Build }}
+
+{{ $bundle := slice $menu $cp | resources.Concat "bundle.js" | resources.Minify }}
+
+<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
+
+<!-- Extended footer section-->
+{{ partial "extended_footer.html" . }}
