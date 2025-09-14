@@ -1,0 +1,33 @@
+.mast {
+    display: flex; align-items: center; gap: 1rem;
+}
+h1.mast-title {
+    font-size: 2.2rem;
+    margin: 0
+}
+h2.mast-subtitle {
+    margin: 0
+}
+
+.mast-pfp {
+    width: 150px;
+    flex-shrink: 0; /* prevent flexbox collapsing the image, thanks chatgpt */
+}
+.mast-pfp img {
+    width: 150px;
+    height: 150px;
+    border-radius: 40%;
+}
+.mast-txt {
+    text-align: justify;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+.social-icons a svg {
+    height: 26px;
+    width: 26px;
+}
