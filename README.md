@@ -21,3 +21,11 @@ go server --bind 0.0.0.0 --port 21313 --baseURL "http://x.x.x.x:21313"
 ## Content
 
 - [Images](https://unsplash.com/)
+
+## Template overrides
+
+- content/_index provides unsafe HTML for the about me box
+- layouts/index:
+    - Add a "Recent posts" h1
+    - Change the date/author meta to be in-line with the h2 post title to squish
+    - Remove post tags

@@ -1,0 +1,57 @@
+{{ define "main" }}
+  {{ if .Content }}
+    <div class="index-content {{ if .Params.framed -}}framed{{- end -}}">
+      {{ .Content }}
+    </div>
+  {{ end }}
+
+  {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
+  {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
+  <h1 class="mast-title">Recent {{ $contentTypeName }}</h1>
+  <div class="posts">
+    {{ $PageContext := . }}
+    {{ if .IsHome }}
+      {{ $PageContext = .Site }}
+    {{ end }}
+    {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
+
+    {{ range $paginator.Pages }}
+      <article class="post on-list">
+	<div class="miffy-post-meta" style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>
+              <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+            </h2>
+            <div class="post-meta" style="margin:0">
+              {{- if .Date -}}
+                <time class="post-date">
+                  {{- partial "post-date" . -}}
+                </time>
+              {{- end -}}
+              {{- with .Params.Author -}}
+                <span class="post-author">{{ . }}</span>
+              {{- end -}}
+            </div>
+	</div>
+        {{ partial "cover.html" . }}
+
+        <div class="post-content" style="margin: 10px 0 0 0">
+          {{ if .Params.showFullContent }}
+            {{ .Content }}
+          {{ else if .Description }}
+            <p>{{ .Description | markdownify }}</p>
+          {{ else }}
+            {{ .Summary }}
+          {{ end }}
+        </div>
+
+        {{ if not .Params.showFullContent }}
+          <div>
+            <a class="read-more button inline" href="{{ .RelPermalink }}">[{{ $.Site.Params.ReadMore }}]</a>
+          </div>
+        {{ end }}
+      </article>
+    {{ end }}
+
+    {{ partial "pagination.html" . }}
+  </div>
+{{ end }}
