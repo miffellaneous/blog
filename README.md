@@ -29,3 +29,8 @@ go server --bind 0.0.0.0 --port 21313 --baseURL "http://x.x.x.x:21313"
     - Add a "Recent posts" h1
     - Change the date/author meta to be in-line with the h2 post title to squish
     - Remove post tags
+    - Remove gaps between content and cover
+    - Blockquote the summary/description
+- layouts/single
+    - Carry over same changes from home page to minimise header
+    - Move tags to bottom of page
