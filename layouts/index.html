@@ -7,7 +7,7 @@
 
   {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
   {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
-  <h1 class="mast-title">Recent {{ $contentTypeName }}</h1>
+  <h1 class="mast-title" style="border-bottom: 3px dotted var(--accent)">Recent {{ $contentTypeName }}</h1>
   <div class="posts">
     {{ $PageContext := . }}
     {{ if .IsHome }}
@@ -38,9 +38,9 @@
           {{ if .Params.showFullContent }}
             {{ .Content }}
           {{ else if .Description }}
-            <p>{{ .Description | markdownify }}</p>
+            <blockquote>{{ .Description | markdownify }}</blockquote>
           {{ else }}
-            {{ .Summary }}
+	    <blockquote>{{ .Summary }}</blockquote>
           {{ end }}
         </div>
 
