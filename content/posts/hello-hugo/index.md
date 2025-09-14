@@ -11,6 +11,9 @@ description = ""
 showFullContent = false
 readingTime = false
 hideComments = false
+summary = "Welcome to my carrot patch."
 +++
 
 Welcome to my carrot patch.
+
+*Cover by [Oliver Sharp](https://unsplash.com/@thechickennugget)*
