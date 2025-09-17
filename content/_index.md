@@ -1,5 +1,6 @@
 +++
 renderer.unsafe = true
+framed = true
 +++
 
 {{< unsafe >}}
