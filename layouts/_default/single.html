@@ -22,7 +22,15 @@
     </div>
   </div>
   <span class="dots"></span>
+  <figure>
   {{ partial "cover.html" . }}
+  <figcaption style="display: flex; justify-content: space-between; align-items: center;">
+    <span>{{ .Params.CoverCaption }}</span>
+    <span>
+    {{- if and (.Param "CoverCreditName") (.Param "CoverCreditUrl") -}}<a href="{{ .Params.CoverCreditUrl }}" style="color: white;">{{ .Params.CoverCreditName }}</a>{{- end -}}
+    </span>
+  </figcaption>
+  </figure>
 
   {{ if (.Params.Toc | default .Site.Params.Toc) }}
     <div class="table-of-contents">
