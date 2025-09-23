@@ -6,7 +6,7 @@ framed = true
 {{< unsafe >}}
 <div class="mast">
     <div class="mast-pfp">
-        <img src="https://placehold.co/150" width=150 />
+        <img src="/miffy.png" alt="Miffy, by Alby" title="Miffy, by Alby" />
     </div>
     <div class="mast-txt">
         <h1 class="mast-title">Miffy</h1>
