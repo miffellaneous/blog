@@ -56,10 +56,53 @@ h2.mast-subtitle {
     bottom: -4px;
 }
 
+
+.post-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.post-card-inner {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.post-card-image img {
+  max-width: 200px;
+  border-radius: 6px;
+  border-width: 2px;
+  overflow: hidden;
+  margin: 5px 0 0 0;
+  padding: 2px;
+}
+
+.post-card-title a {
+  text-decoration: none;
+}
+.post-card-title a:hover {
+  text-decoration: underline;
+}
+
 /* overrides */
 .post-cover {
     margin: 10px 0 0 0;
 }
 .footer {
     padding: 10px 0 20px 0;
+}
+a.button.inline.read-more {
+    margin: 5px 0 0 0;
+    padding: 0 5px;
+    background: var(--accent);
+    color: var(--background);
+}
+a.button.inline.read-more:hover {
+    color: var(--accent);
+    background: var(--background);
+    text-decoration: underline;
+}
+.pagination__title {
+    margin-top: 0;
 }
