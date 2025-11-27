@@ -53,17 +53,18 @@ I used `systemctl status` to get a tree of the running services in the hope that
 ```
 
 Neatly, the `app.slice` appeared to correspond to the two Unifi Applications I have installed: Network (app-unifi) and Protect (app-protect).
-The Network Application is tightly coupled to the workings of the gateway, so it's not unexpected that the `app-unifi` slice simply runs a service named `unifi`.
+The Network Application is tightly coupled to the workings of the gateway, so it's not unexpected that the `app-unifi` slice simply runs a service named `unifi`, but you'd be forgiven for first thinking that restarting this service could bring down the whole gateway.
 
 A quick Google suggested the `ace.jar`[^ace] (starred in my output above) is indeed the brains behind the network application controller, so I figured this was the best thing to kick and if I was wrong, I'd just reboot the machine.
 
 ## tl;dr
 
+The Network Application is controlled by the `unifi` service, so I restarted it.
+
 ```
 systemctl restart unifi
 ```
 
-I restarted the `unifi` service.
 It took around a minute or so for control to return to my shell prompt, presumably there is a lot to do in stopping and starting this service.
 During this time the Network Application in my browser appeared as unavailable, but without impact to my internet connection and Protect.
 Around a minute after that, the Network Application including its dashboard and other views were all reachable once more.
