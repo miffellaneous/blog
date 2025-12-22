@@ -48,6 +48,7 @@ db.device.aggregate([
 
 I confirmed that these results corresponded to ghosts in the Unifi Network App.
 Looking at unassigned ports it looks as though we'd want to `unset` the `last_connection` field for our ghosts.
+I'd also need to inspect the disconnected timestamp to not overzealously remove devices that were taking a nap, like my work laptop now that I'm off for the holidays.
 
 ## Busting ghosts
 
