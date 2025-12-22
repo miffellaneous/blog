@@ -39,6 +39,7 @@ mongo --port 27117
 A little bit of `show dbs`, `show tables` and empty `db.collection.find`'s later, I had a query to interrogate the `device` collection[^ace] which records a `last_connection` object for each of the devices ports in a `port_table` field, and find those that have a disconnected "ghost".
 
 ```
+use ace
 db.device.aggregate([
   { $unwind: "$port_table" },
   { $match: { "port_table.last_connection.disconnected_at": { $exists: true } } },
