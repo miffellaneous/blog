@@ -1,6 +1,6 @@
 +++
 title = "Samba: volume_label segfault with bad usershare permissions"
-date = "2026-01-26T19:00:00Z"
+date = "2026-02-10T19:00:00Z"
 author = "Miffy"
 authorTwitter = "" #do not include @
 cover = "cover.png"
@@ -18,7 +18,7 @@ summary = "In this post I discover I set up Samba wrong, triggering an unexpecte
 
 ## Background
 
-A few days ago I moved the last of my local [Obsidian Vaults](https://obsidian.md/) to my NAS.
+A few weeks ago I moved the last of my local [Obsidian Vaults](https://obsidian.md/) to my NAS.
 Almost immediately after moving the vault, while editing a note on my desktop, Obsidian unceremoniously closed the vault and quit to the vault management screen.
 
 Odd, I thought, until it happened again minutes later; and many times, unrelentingly in the following hours and days after.
