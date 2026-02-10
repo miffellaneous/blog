@@ -13,7 +13,7 @@ description = ""
 showFullContent = false
 readingTime = false
 hideComments = false
-summary = "In this post I discover I set up Samba wrong, triggering an unexpected segfault."
+summary = "I encountered a segfault in Samba seemingly caused by permission errors, then I made it go away."
 +++
 
 ## Background
