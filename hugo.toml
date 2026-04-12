@@ -2,7 +2,7 @@ baseURL = 'https://miffellaneous.net/'
 languageCode = 'en-us'
 title = 'miffellaneous'
 theme = 'terminal'
-pagination.pagerSize = 5
+pagination.pagerSize = 10
 
 # Required for Chroma and the custom syntax highlighting.
 [markup.highlight]
