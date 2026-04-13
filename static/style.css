@@ -106,3 +106,9 @@ a.button.inline.read-more:hover {
 .pagination__title {
     margin-top: 0;
 }
+
+.redirect-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
