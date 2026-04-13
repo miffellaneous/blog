@@ -13,7 +13,7 @@ description = ""
 showFullContent = false
 readingTime = false
 hideComments = false
-summary = "I had a big think about the role of man and machine in software development."
+summary = "I had a big think about the role of humans and their machines in software development."
 +++
 
 The internet did not ask for another coming-to-terms-with-LLMs post, but here is mine.
