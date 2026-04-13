@@ -1,6 +1,6 @@
 +++
 title = "Slop is a choice"
-date = "2026-03-21T11:00:00Z"
+date = "2026-04-13T17:00:00Z"
 author = "Miffy"
 authorTwitter = "" #do not include @
 cover = "cover.png"
