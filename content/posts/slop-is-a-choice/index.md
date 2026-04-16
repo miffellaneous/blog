@@ -189,7 +189,7 @@ If we do nothing and let the marketing hype crowd us out, our businesses will co
 
 It is on us to hold our own informed opinions, not to merely accept the hype or doom at face value, and use our respective influences at all levels.
 You don't have to be in the C-suite setting policy, simply calling out a colleague for expecting review of a disrespectfully careless merge request, or for avoiding accountability by hiding behind an LLM as the commit author, will make a difference.
-Our aim should be to make software development better, not quicker; and if we're lucky we might get to keep enjoying writing code that lets us sleep at night.
+Our aim should be to make software development better, not cheaper; and if we're lucky we might get to keep enjoying writing code that lets us sleep at night.
 
 For now, I begrudgingly accept my automated first officer, and I'm actually curious to see where we go next.
 
