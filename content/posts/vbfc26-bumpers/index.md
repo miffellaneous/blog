@@ -138,7 +138,13 @@ I really had a great time playing with this PNGTuber by applying ridiculous tran
 
 ---
 
-Thanks for watching!
+I really enjoyed the excuse to be a little creative and put these together and it was satisfying to see and hear people enjoy them as part of the con.
+
+I had an incredible weekend at VBFC, and want to thank everyone who I met: you all made me feel so welcome in what is a new space for me.
+I'm full of admiration for the dedication from all who volunteered to deliver an enjoyable and safe space for us to spend the weekend together over the airwaves. I hope you all know that your hard work paid off.
+I'll always remember this as Miffy's first con.
+
+That's all folks! Until next time, thanks for watching!
 
 
 [^patch]: I am a sucker for a patch.
