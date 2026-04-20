@@ -77,7 +77,7 @@ DaVinci Resolve even has a sound editing suite built-in that let me normalise th
 If I were to make more videos, I would certainly be investing in a directional microphone to avoid that.
 
 I'm actually really happy with how it came out, given that I haven't made a video for over ten years.
-Not only did I catch a glimpse of it during the opening ceremony montage, it was also the final bumper to play in the main channel before VBFC brought to a close.
+Not only did I catch a glimpse of it during the opening ceremony montage, it was also the final bumper to play in the main channel before VBFC was brought to a close.
 
 
 # Pizza
@@ -93,10 +93,7 @@ I detach myself from a ball of dough that has slow proofed in the fridge for 24 
 {{< youtube iYrxxjuXiL0 >}}
 
 This was pretty fun to edit. It was straightforward to take subclips of the main video to shorten the sequence down, then tidy the transitions from there.
-I thought about adding various bopping noises as the toppings got added, but I liked the idea that all three of the bumpers would be quite chill.
-
-
-just be chill outside noises.
+I thought about adding various bopping noises as the toppings got added, but I liked the idea that all three of the bumpers would be calm for viewers and only feature the noises of the birds in our garden.
 
 Second, we watch the pizza bake in the oven.
 This was a freebie really, it's just a timelapse shot on my phone.
