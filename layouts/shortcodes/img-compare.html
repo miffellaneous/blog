@@ -1,0 +1,9 @@
+{{ $before := .Page.Resources.GetMatch (.Get "before") }}
+{{ $after := .Page.Resources.GetMatch (.Get "after") }}
+{{ $labelBefore := .Get "labelBefore" | default "Before" }}
+{{ $labelAfter := .Get "labelAfter" | default "After" }}
+
+<img-comparison-slider>
+  {{ with $before }}<img slot="first" src="{{ .RelPermalink }}" alt="{{ $labelBefore }}" />{{ end }}
+  {{ with $after }}<img slot="second" src="{{ .RelPermalink }}" alt="{{ $labelAfter }}" />{{ end }}
+</img-comparison-slider>

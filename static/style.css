@@ -112,3 +112,18 @@ a.button.inline.read-more:hover {
     justify-content: space-between;
     padding: 0 20px 0 20px;
 }
+
+/* img-comparison */
+img-comparison-slider {
+  --divider-color: var(--accent);
+  --divider-width: 3px;
+  --default-handle-width: 75px;
+  --default-handle-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+  outline: none;
+}
+img-comparison-slider:focus {
+  --divider-color: color-mix(in srgb, var(--accent) 60%, white 40%);
+}
+img-comparison-slider:focus-within img {
+  border-color: color-mix(in srgb, var(--accent) 60%, white 40%);
+}
