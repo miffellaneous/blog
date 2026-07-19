@@ -127,3 +127,6 @@ img-comparison-slider:focus {
 img-comparison-slider:focus-within img {
   border-color: color-mix(in srgb, var(--accent) 60%, white 40%);
 }
+img-comparison-slider img {
+  box-sizing: border-box;
+}
