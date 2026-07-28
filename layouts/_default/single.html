@@ -22,6 +22,7 @@
     </div>
   </div>
   <span class="dots"></span>
+  {{- if not (.Param "hideCover") -}}
   <figure>
   {{ partial "cover.html" . }}
   <figcaption style="display: flex; justify-content: space-between; align-items: center;">
@@ -31,6 +32,7 @@
     </span>
   </figcaption>
   </figure>
+  {{- end -}}
 
   {{ if (.Params.Toc | default .Site.Params.Toc) }}
     <div class="table-of-contents">
