@@ -1,27 +1,6 @@
 {{ define "main" }}
 <article class="post">
-  <div class="miffy-post-meta" style="display: flex; justify-content: space-between; align-items: center;">
-    <h1 style="margin: 0">
-        <a style="text-decoration: none;" href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-    </h1>
-    <div class="post-meta" style="margin:0">
-    {{- if .Date -}}
-      <time class="post-date">
-        {{- partial "post-date" . -}}
-        {{- if and $.Site.Params.showLastUpdated .Lastmod -}}
-          &nbsp;{{- partial "post-lastmod" . -}}
-        {{- end -}}
-      </time>
-    {{- end -}}
-    {{- with .Params.Author -}}
-      <span class="post-author">{{ . }}</span>
-    {{- end -}}
-    {{- if and (.Param "readingTime") (eq (.Param "readingTime") true) -}}
-      <span class="post-reading-time">{{ .ReadingTime }} {{ $.Site.Params.minuteReadingTime | default "min read" }} ({{ .WordCount }} {{ $.Site.Params.words | default "words" }})</span>
-    {{- end -}}
-    </div>
-  </div>
-  <span class="dots"></span>
+  {{ partial "post_meta.html" . }}
   {{- if not (.Param "hideCover") -}}
   <figure>
   {{ partial "cover.html" . }}
