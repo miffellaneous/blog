@@ -131,3 +131,41 @@ img-comparison-slider img {
   margin: 0;
   box-sizing: border-box;
 }
+
+/* photo */
+.photo-figcaption {
+  padding: 0;
+}
+
+.photo-figcaption-head {
+  background-color: color-mix(in srgb, var(--accent) 60%, black 40%);
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75em;
+}
+
+.photo-figcaption-id {
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.photo-figcaption-title {
+  text-align: right;
+}
+
+.photo-figcaption-meta {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em 1.5em;
+}
+
+.photo-figcaption-meta-item {
+  opacity: 0.85;
+}
+
+.photo-figcaption-unit {
+  font-size: 0.8em;
+  opacity: 0.85;
+}

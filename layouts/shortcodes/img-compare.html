@@ -3,11 +3,24 @@
 {{ $labelBefore := .Get "labelBefore" | default "Before" }}
 {{ $labelAfter := .Get "labelAfter" | default "After" }}
 {{ $caption := .Get "caption" }}
+{{ $photo := .Page.Params.photo }}
 
 <figure>
   <img-comparison-slider>
   {{ with $before }}<img slot="first" src="{{ .RelPermalink }}" alt="{{ $labelBefore }}" />{{ end }}
   {{ with $after }}<img slot="second" src="{{ .RelPermalink }}" alt="{{ $labelAfter }}" />{{ end }}
   </img-comparison-slider>
-  {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+  <figcaption class="photo-figcaption">
+    <div class="photo-figcaption-head">
+      {{ with $photo.number }}<span class="photo-figcaption-id">#{{ . }}</span>{{ end }}
+      {{ with $photo.title }}<span class="photo-figcaption-title">{{ . }}</span>{{ end }}
+    </div>
+    <div class="photo-figcaption-meta">
+      {{ with $photo.shots }}<span class="photo-figcaption-meta-item"><span class="photo-figcaption-unit">Shots#</span>{{ . }}</span>{{ end }}
+      {{ with $photo.aperture }}<span class="photo-figcaption-meta-item"><span class="photo-figcaption-unit">f/</span>{{ . }}</span>{{ end }}
+      {{ with $photo.shutterSpeed }}<span class="photo-figcaption-meta-item">{{ . }}<span class="photo-figcaption-unit">s</span></span>{{ end }}
+      {{ with $photo.iso }}<span class="photo-figcaption-meta-item"><span class="photo-figcaption-unit">ISO</span>{{ . }}</span>{{ end }}
+      {{ with $photo.focalLength }}<span class="photo-figcaption-meta-item">{{ . }}<span class="photo-figcaption-unit">mm</span></span>{{ end }}
+    </div>
+  </figcaption>
 </figure>
