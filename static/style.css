@@ -140,6 +140,9 @@ img-comparison-slider img {
   display: flex;
   flex-direction: column;
 }
+.photo img {
+  margin: 0;
+}
 
 .photo-figcaption-head {
   color: var(--background);

@@ -1,8 +1,8 @@
-{{ $before := .Page.Resources.GetMatch (.Get "before") }}
-{{ $after := .Page.Resources.GetMatch (.Get "after") }}
-{{ $labelBefore := .Get "labelBefore" | default "Before" }}
-{{ $labelAfter := .Get "labelAfter" | default "After" }}
-{{ $caption := .Get "caption" }}
+{{ $raw := "" }}
+{{ $edit := "" }}
+{{ with .Get "raw" }}{{ $raw = $.Page.Resources.GetMatch . }}{{ end }}
+{{ with .Get "edit" }}{{ $edit = $.Page.Resources.GetMatch . }}{{ end }}
+{{ $alt := .Get "alt" | default .Page.Title }}
 {{ $photo := .Page.Params.photo }}
 
 <figure class="photo">
@@ -10,10 +10,16 @@
     {{ with $photo.number }}<span class="photo-figcaption-id">#{{ . }}</span>{{ end }}
     {{ with $photo.title }}<h1 class="photo-figcaption-title">{{ . }}</h1>{{ end }}
   </div>
-  <img-comparison-slider>
-  {{ with $before }}<img slot="first" src="{{ .RelPermalink }}" alt="{{ $labelBefore }}" />{{ end }}
-  {{ with $after }}<img slot="second" src="{{ .RelPermalink }}" alt="{{ $labelAfter }}" />{{ end }}
-  </img-comparison-slider>
+  {{ if and $raw $edit }}
+    <img-comparison-slider>
+    {{ with $raw }}<img slot="first" src="{{ .RelPermalink }}" alt="{{ $alt }} (RAW)" />{{ end }}
+    {{ with $edit }}<img slot="second" src="{{ .RelPermalink }}" alt="{{ $alt }} (Edit)" />{{ end }}
+    </img-comparison-slider>
+  {{ else if $raw }}
+    <img src="{{ $raw.RelPermalink }}" alt="{{ $alt }}">
+  {{ else if $edit }}
+    <img src="{{ $edit.RelPermalink }}" alt="{{ $alt }}">
+  {{ end }}
   <div class="photo-figcaption-meta">
     {{ with $photo.shots }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "film" }}<span class="photo-figcaption-unit"></span>{{ . }}</span>{{ end }}
     {{ with $photo.aperture }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "aperture" }}<span class="photo-figcaption-unit">f/</span>{{ . }}</span>{{ end }}
