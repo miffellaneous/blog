@@ -120,6 +120,7 @@ img-comparison-slider {
   --default-handle-width: 150px;
   --default-handle-shadow: 0px 2px 2px var(--accent);
   outline: none;
+  display: block;
 }
 img-comparison-slider:focus {
   --divider-color: color-mix(in srgb, var(--accent) 60%, white 40%);
@@ -132,18 +133,12 @@ img-comparison-slider img {
   box-sizing: border-box;
 }
 
-/* photo */
+/* remove padding at the top of photo posts that usually sits under the (now-removed) post meta */
 .photo-post {
   padding: 0;
 }
-.photo {
-  display: flex;
-  flex-direction: column;
-}
-.photo img {
-  margin: 0;
-}
 
+/* metadata rows for photo figure */
 .photo-figcaption-row {
   padding: 2px 12px;
   color: var(--background);
@@ -152,7 +147,21 @@ img-comparison-slider img {
   justify-content: center;
   gap: 0.5em 1.5em;
 }
+.photo-figcaption-meta-item {
+  opacity: 0.85;
+}
+.photo-figcaption-unit {
+  font-size: 0.8em;
+  opacity: 0.85;
+}
+.meta-icon svg {
+  width: 0.9em;
+  height: 0.9em;
+  vertical-align: -0.15em;
+  margin: 0;
+}
 
+/* photo fig header */
 .photo-figcaption-head {
   padding: 8px 12px;
   color: var(--background);
@@ -170,44 +179,27 @@ img-comparison-slider img {
   text-align: right;
   margin: 0;
 }
-
 .photo-figcaption-context {
   display: flex;
   justify-content: space-between;
   font-size: 0.85em;
 }
 
+/* photo fig footer */
+.photo-figcaption-meta {
+  background-color: var(--accent);
+}
 .photo-figcaption-gear {
   background-color: color-mix(in srgb, var(--accent) 80%, white 20%);
   font-size: 0.85em;
 }
 
-.photo-figcaption-meta {
-  background-color: var(--accent);
-}
-
-.photo-figcaption-meta-item {
-  opacity: 0.85;
-}
-
-.photo-figcaption-unit {
-  font-size: 0.8em;
-  opacity: 0.85;
-}
-
-.meta-icon svg {
-  width: 0.9em;
-  height: 0.9em;
-  vertical-align: -0.15em;
-  margin: 0;
-}
-
-/* centre images and ensure they dont double up on whitespace */
+/* centre standalone figures and ensure they dont double up on whitespace */
 .post-content figure {
   display: block;
   width: fit-content;
   max-width: 100%;
-  margin: 1em auto;
+  margin: 0 auto;
 }
 .post-content figure img {
   display: block;
