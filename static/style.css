@@ -133,11 +133,16 @@ img-comparison-slider img {
 }
 
 /* photo */
-.photo-figcaption {
+.photo-post {
   padding: 0;
+}
+.photo {
+  display: flex;
+  flex-direction: column;
 }
 
 .photo-figcaption-head {
+  color: var(--background);
   background-color: color-mix(in srgb, var(--accent) 60%, black 40%);
   padding: 8px 12px;
   display: flex;
@@ -153,12 +158,19 @@ img-comparison-slider img {
 
 .photo-figcaption-title {
   text-align: right;
+  margin: 0;
 }
 
 .photo-figcaption-meta {
+  color: var(--background);
+  background-color: var(--accent);
   display: flex;
   justify-content: center;
   gap: 0.5em 1.5em;
+}
+
+.photo-figcaption-meta-smaller {
+  font-size: 0.85em;
 }
 
 .photo-figcaption-meta-item {
@@ -168,4 +180,11 @@ img-comparison-slider img {
 .photo-figcaption-unit {
   font-size: 0.8em;
   opacity: 0.85;
+}
+
+.meta-icon svg {
+  width: 0.9em;
+  height: 0.9em;
+  vertical-align: -0.15em;
+  margin: 0;
 }
