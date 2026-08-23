@@ -9,11 +9,11 @@ coverCreditUrl = ""
 coverCreditName = ""
 tags = ["photography"]
 #keywords = ["", ""]
-description = "..."
+description = "I snapped a photo of Alice of Wonderland and spent the evening editing out what I saw in the looking glass."
 showFullContent = false
 readingTime = false
 hideComments = false
-summary = "...?"
+summary = ""
 layout = "photo"
 [photo]
     number = 678
