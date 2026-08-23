@@ -2,13 +2,20 @@
 {{ $edit := "" }}
 {{ with .Get "raw" }}{{ $raw = $.Page.Resources.GetMatch . }}{{ end }}
 {{ with .Get "edit" }}{{ $edit = $.Page.Resources.GetMatch . }}{{ end }}
-{{ $alt := .Get "alt" | default .Page.Title }}
 {{ $photo := .Page.Params.photo }}
+{{ $alt := $photo.alt | default .Page.Title }}
 
 <figure class="photo">
   <div class="photo-figcaption-head">
     {{ with $photo.number }}<span class="photo-figcaption-id">#{{ . }}</span>{{ end }}
     {{ with $photo.title }}<h1 class="photo-figcaption-title">{{ . }}</h1>{{ end }}
+  </div>
+  <div class="photo-figcaption-row photo-figcaption-context">
+    <span class="photo-figcaption-meta-item">{{ partial "icon.html" "calendar" }}{{ .Page.Date.Format "2006-01-02" }}</span>
+    <span class="photo-figcaption-location">
+    {{ with $photo.locationPin }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "map-pin" }}{{ . }}</span>{{ end }}
+    {{ with $photo.locationMap }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "map" }}{{ . }}</span>{{ end }}
+    </span>
   </div>
   {{ if and $raw $edit }}
     <img-comparison-slider>
@@ -20,18 +27,14 @@
   {{ else if $edit }}
     <img src="{{ $edit.RelPermalink }}" alt="{{ $alt }}">
   {{ end }}
-  <div class="photo-figcaption-meta photo-figcaption-meta-smaller">
-    {{ with $photo.locationPin }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "map-pin" }}{{ . }}</span>{{ end }}
-    {{ with $photo.locationMap }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "map" }}{{ . }}</span>{{ end }}
-  </div>
-  <div class="photo-figcaption-meta">
+  <div class="photo-figcaption-row photo-figcaption-meta">
     {{ with $photo.shots }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "film" }}<span class="photo-figcaption-unit"></span>{{ . }}</span>{{ end }}
     {{ with $photo.aperture }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "aperture" }}<span class="photo-figcaption-unit">f/</span>{{ . }}</span>{{ end }}
     {{ with $photo.shutterSpeed }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "clock" }}{{ . }}<span class="photo-figcaption-unit">s</span></span>{{ end }}
     {{ with $photo.iso }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "sun" }}<span class="photo-figcaption-unit">ISO</span>{{ . }}</span>{{ end }}
     {{ with $photo.focalLength }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "ruler" }}{{ . }}<span class="photo-figcaption-unit">mm</span></span>{{ end }}
   </div>
-  <div class="photo-figcaption-meta photo-figcaption-meta-smaller">
+  <div class="photo-figcaption-row photo-figcaption-gear">
     {{ with $photo.camera }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "camera" }}{{ . }}</span>{{ end }}
     {{ with $photo.lens }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "flashlight" }}{{ . }}</span>{{ end }}
   </div>

@@ -144,27 +144,8 @@ img-comparison-slider img {
   margin: 0;
 }
 
-.photo-figcaption-head {
-  color: var(--background);
-  background-color: color-mix(in srgb, var(--accent) 60%, black 40%);
-  padding: 8px 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 0.75em;
-}
-
-.photo-figcaption-id {
-  font-weight: 600;
-  flex-shrink: 0;
-}
-
-.photo-figcaption-title {
-  text-align: right;
-  margin: 0;
-}
-
-.photo-figcaption-meta {
+.photo-figcaption-row {
+  padding: 2px 12px;
   color: var(--background);
   background-color: var(--accent);
   display: flex;
@@ -172,8 +153,37 @@ img-comparison-slider img {
   gap: 0.5em 1.5em;
 }
 
-.photo-figcaption-meta-smaller {
+.photo-figcaption-head {
+  padding: 8px 12px;
+  color: var(--background);
+  background-color: color-mix(in srgb, var(--accent) 60%, black 40%);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75em;
+}
+.photo-figcaption-id {
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.photo-figcaption-title {
+  text-align: right;
+  margin: 0;
+}
+
+.photo-figcaption-context {
+  display: flex;
+  justify-content: space-between;
   font-size: 0.85em;
+}
+
+.photo-figcaption-gear {
+  background-color: color-mix(in srgb, var(--accent) 80%, white 20%);
+  font-size: 0.85em;
+}
+
+.photo-figcaption-meta {
+  background-color: var(--accent);
 }
 
 .photo-figcaption-meta-item {
