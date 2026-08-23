@@ -20,6 +20,10 @@
   {{ else if $edit }}
     <img src="{{ $edit.RelPermalink }}" alt="{{ $alt }}">
   {{ end }}
+  <div class="photo-figcaption-meta photo-figcaption-meta-smaller">
+    {{ with $photo.locationPin }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "map-pin" }}{{ . }}</span>{{ end }}
+    {{ with $photo.locationMap }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "map" }}{{ . }}</span>{{ end }}
+  </div>
   <div class="photo-figcaption-meta">
     {{ with $photo.shots }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "film" }}<span class="photo-figcaption-unit"></span>{{ . }}</span>{{ end }}
     {{ with $photo.aperture }}<span class="photo-figcaption-meta-item">{{ partial "icon.html" "aperture" }}<span class="photo-figcaption-unit">f/</span>{{ . }}</span>{{ end }}
